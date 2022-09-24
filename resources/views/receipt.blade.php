@@ -1,5 +1,14 @@
 <!-- Nico Abel Laia | 20215520010 | TI MATANA 2021 -->
 
+<!-- 
+    
+    Step Menjalankan Website
+
+    npm run dev 
+    php artisan serve 
+
+-->
+
 <!doctype html>
 <html>
 <head>
@@ -131,3 +140,12 @@
 </html>
 
 <!-- Nico Abel Laia | 20215520010 | TI MATANA 2021 -->
+
+<!-- 
+    
+    Step Menjalankan Website
+    
+    npm run dev 
+    php artisan serve 
+
+-->
