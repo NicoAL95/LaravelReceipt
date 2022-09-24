@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('receipt');
 });
 
-// Receipt
-Route::get('/receipt', function () {
-    return view('receipt.receipt');
-});

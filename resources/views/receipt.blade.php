@@ -1,78 +1,28 @@
+<!-- Nico Abel Laia | 20215520010 | TI MATANA 2021 -->
+
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
-  <title>Nico Abel Laia</title>
+  <title>Nico Abel Laia - TI Matana 2021</title>
 </head>
 <body class="bg-mainBlack py-10">
 
 <?php 
     $products = array('Choco Pie', 'Silverqueen', 'Cadburry');
     $prices = array(18000, 12000, 19000);
+    $qty = array(5, 3, 1);
     $discount = 0;
     $tax = 0;
     $totalPrices = 0;
-?>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-fit bg-red-400 rounded-[15px] p-5">
-    <div class="sumWrapper">
-        <div class="sumTitle">
-            <h1>Order Summary</h1>
-        </div>
-        <div class="sumOrder">
-            <div class="sumCol coLeft">
-                <h1 class="colTitle">Product</h1>
-                <?php 
-                    for ($i=0; $i < count($products); $i++) { 
-                        if ($qty[$i] > 0) {
-                            echo "<h1 class='colItem'>" . $products[$i] . "</h1>";
-                        }
-                    }
-                ?>
-            </div>
-            <div class="sumCol col-span-2 coCenter">
-                <h1 class="colTitle">Price</h1>
-                <?php 
-                    for ($i=0; $i < count($prices); $i++) { 
-                        if ($qty[$i] > 0) {
-                            echo "<h1 class='colItem'>" . number_format($prices[$i]) . "</h1>";
-                        }
-                    }
-                ?>
-            </div>
-            <div class="sumCol coCenter">
-                <h1 class="colTitle">Add to Cart</h1>
-                <div class="colItem">
-                    <form action="receipt" method="get" class=" flex flex-col space-y-3">
-                        <input class="inputForm" type="number" name="chocoPie" id="" min="0">
-                        <input class="inputForm" type="number" name="silverQueen" id="" min="0">
-                        <input class="inputForm" type="number" name="cadBurry" id="" min="0">
-                        <button type="submit" class="bg-[#00A286]">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php
-    $qty = array($_GET('chocoPie'), $_GET('silverQueen'), $_GET('cadBurry'));
 ?>
 
   <section class="receiptWrapper">
     <div class="headReceipt">
         <img src="/img/coshop.svg" class="w-auto h-[40px] mb-[20px]" alt="">
         <h1 class="text-[22px] font-[600] font-poppins text-superWhite">Welcome Onboard!</h1>
-        <form action="receipt" method="get">
-            Nama: <input type="number" name="namaBarang" id="">
-            <input type="submit">
-        </form>
-        <?php
-            echo "<h1 class='text-white'>" .  $_GET["chocoPie"] . "</h1>";
-            echo "<h1 class='text-white'>" .  $_GET["silverQueen"] . "</h1>";
-            echo "<h1 class='text-white'>" .  $_GET["cadBurry"] . "</h1>";
-        ?>
         <div class="headDesc">
             <h1>Hi <span>Nico Abel Laia</span>,</h1>
             <br>
@@ -87,7 +37,7 @@
             <div class="sumCol coLeft">
                 <h1 class="colTitle">Product</h1>
                 <?php 
-                    for ($i=0; $i < count($products); $i++) { 
+                    for ($i=0; $i < count($prices); $i++) { 
                         if ($qty[$i] > 0) {
                             echo "<h1 class='colItem'>" . $products[$i] . "</h1>";
                         }
@@ -179,3 +129,5 @@
   </section>
 </body>
 </html>
+
+<!-- Nico Abel Laia | 20215520010 | TI MATANA 2021 -->
